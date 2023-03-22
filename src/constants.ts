@@ -16,8 +16,8 @@ export const rowData = [
     Email: 'olga@gmail.com',
     Gender: 'Female',
     DOB: '1989-02-22',
-    Country: 'Ukraina',
-    City: 'Vinnica',
+    Country: 'Ukraine',
+    City: 'Vinnytsia',
   },
   {
     Id: 3,
