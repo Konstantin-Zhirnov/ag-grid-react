@@ -26,15 +26,15 @@ const ButtonsPanel: React.FC<IProps> = React.memo(({ gridRef }) => {
   }, [])
 
   const buttons = [
-    { text: 'Deselect', onClick: deselectButtonClick },
     { text: 'Save filter parameters', onClick: onSaveFilterButtonClick },
     { text: 'Apply filter parameters', onClick: onApplyFilterButtonClick },
+    { text: 'Deselect', onClick: deselectButtonClick },
   ]
 
   return (
     <div className={classes.container}>
       {buttons.map((btn) => (
-        <Button text={btn.text} onClick={btn.onClick} />
+        <Button key={btn.text} text={btn.text} onClick={btn.onClick} />
       ))}
     </div>
   )

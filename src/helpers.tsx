@@ -1,4 +1,3 @@
-import React from 'react'
 import GenderIcon from './GenderIcon'
 
 export const comparator = (dateFromFilter: Date, cellValue: string) => {

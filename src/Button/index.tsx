@@ -7,11 +7,15 @@ interface IProps {
   text: string
   onClick: () => void
   red?: boolean
+  floating?: boolean
 }
 
-const Button: React.FC<IProps> = React.memo(({ text, onClick, red }) => {
+const Button: React.FC<IProps> = React.memo(({ text, onClick, red, floating }) => {
   return (
-    <button className={cn(classes.container, { [classes.red]: red })} onClick={onClick}>
+    <button
+      className={cn(classes.container, { [classes.red]: red, [classes.floating]: floating })}
+      onClick={onClick}
+    >
       {text}
     </button>
   )

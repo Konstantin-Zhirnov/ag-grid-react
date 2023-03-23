@@ -35,6 +35,9 @@ export default React.forwardRef((props: any, ref: ForwardedRef<any>) => {
       getModelAsString() {
         return filterState === 'off' ? '' : filterState
       },
+      setValue(value: string) {
+        setFilterState(value)
+      },
     }
   })
 

@@ -18,9 +18,19 @@
   padding: 4px 10px
   position: relative
   text-decoration: none
-  transition: background-color .25s cubic-bezier(.4,0,.2,1) 0ms,box-shadow .25s cubic-bezier(.4,0,.2,1) 0ms,border-color .25s cubic-bezier(.4,0,.2,1) 0ms,color .25s cubic-bezier(.4,0,.2,1) 0ms
+  transition: all 400ms
   -webkit-user-select: none
   user-select: none
   vertical-align: middle
+  height: 28px
   &.red
     background-color: red
+    &:hover
+      background-color: #e10303
+  &.floating
+    height: 24px
+    margin: 12px 2px 0
+  &:hover
+    background-color: #1565c0
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12)
+    text-decoration: none

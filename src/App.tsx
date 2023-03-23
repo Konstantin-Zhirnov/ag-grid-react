@@ -9,7 +9,7 @@ import 'ag-grid-community/styles/ag-theme-alpine.css'
 import SimpleComponent from './SimpleComponent'
 import ButtonsPanel from './ButtonsPanel'
 import CustomFilter from './CustomFilter'
-import FloatingFilter from './FloatingFilter'
+import CustomFloatingFilter from './CustomFloatingFilter'
 
 import { comparator, cellRendererSelector } from './helpers'
 import { rowData } from './constants'
@@ -34,11 +34,13 @@ const App: React.FC = () => {
     {
       field: 'Age',
       filter: CustomFilter,
-      floatingFilter: true,
       filterParams: {
         title: 'Custom filter',
         values: ['40', '34', '14', '3'],
       },
+      floatingFilter: true,
+      floatingFilterComponent: CustomFloatingFilter,
+      width: 240,
     },
     { field: 'Email' },
     { field: 'Gender', cellRendererSelector },
